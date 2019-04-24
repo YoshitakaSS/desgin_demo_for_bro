@@ -15,4 +15,12 @@ $(function(){
             $menu.slideUp();
         }
     });
+
+    $('.js-scguide-btn').on('click', function(){
+        var $memberInfo = $(this).next().find('.members-info');
+        var $memberList = $(this).next().find('.members-list');
+        var scw = $memberList.width() / 10;
+        $memberInfo.animate({scrollLeft : scw});
+        $(this).fadeOut();
+    });
 });
